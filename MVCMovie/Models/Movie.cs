@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -27,5 +28,12 @@ namespace MVCMovie.Models
         //abc@xyz.com
         [EmailAddress]
         public string Email { get; set; }
+    }
+    public class MovieGenreViewModel
+    {
+        public List<Movie> Movies { get; set; }
+        public SelectList Genres { get; set; }
+        public string MovieGenre { get; set; }
+        public string SearchString { get; set; }
     }
 }
