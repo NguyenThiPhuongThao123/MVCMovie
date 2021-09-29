@@ -11,7 +11,6 @@
     <a asp-action="Create">Create New</a>
 </p>
 <form asp-controller="Movies" asp-action="Index">
-    <p>
         Title: <input type="text" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
@@ -26,10 +25,16 @@
                 @Html.DisplayNameFor(model => model.ReleaseDate)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Genre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
             </th>
             <th></th>
         </tr>
@@ -44,10 +49,16 @@
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
